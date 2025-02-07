@@ -23,7 +23,7 @@ import me.ibrahim.decompose.sample.decompose.listComponent.ListComponent
 fun QuotesList(
     component: ListComponent
 ) {
-    val quotes by component.quotesList.subscribeAsState()
+    val quotes by component.listViewModel.quotesList.subscribeAsState()
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
