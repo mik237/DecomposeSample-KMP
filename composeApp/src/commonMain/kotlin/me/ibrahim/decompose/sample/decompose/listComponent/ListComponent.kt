@@ -4,6 +4,6 @@ import com.arkivanov.decompose.value.Value
 import me.ibrahim.decompose.sample.data_models.Quote
 
 interface ListComponent {
-    val quotesList: Value<List<Quote>>
+    val listViewModel: ListViewModel
     fun onQuoteClicked(quote: Quote)
 }

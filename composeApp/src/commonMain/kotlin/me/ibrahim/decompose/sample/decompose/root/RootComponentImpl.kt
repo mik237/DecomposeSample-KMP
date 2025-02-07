@@ -49,10 +49,11 @@ class RootComponentImpl(
 
 
     private fun buildQuotesListComponent(context: ComponentContext): ListComponent {
-        return ListComponentImpl(quoteClicked = {
-            navigation.push(NavigationConfig.QuotesDetail(it))
-            println("Quote: ${it.quote}")
-        })
+        return ListComponentImpl(
+            componentContext = context,
+            quoteClicked = {
+                navigation.push(NavigationConfig.QuotesDetail(it))
+            })
     }
 
     private fun buildQuotesDetailComponent(quote: Quote, context: ComponentContext): DetailComponent {
